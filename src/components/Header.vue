@@ -1,5 +1,5 @@
 <template>
-  <header class="flex justify-between bg-slate-900 p-4 md:p-6 lg:p-8 text-zinc-500 min-w-screen border-b-1 border-white">
+  <header class="flex justify-between bg-slate-950 p-4 md:p-6 lg:p-8 text-zinc-500 min-w-screen border-b-1 border-zinc-600">
     <nav class ="flex flex-wrap justify-center items-center gap-3 lg:gap-8 font-bold text-sm lg:text-lg">
       <img src="../assets/logo.svg" class="w-25 md:w-35 lg:w-40 hover:scale-[1.05] duration-300">
       <a v-if="dispositivo === 'Desktop'" href="" class="hover:scale-[1.05] hover:text-zinc-300 duration-300">Features</a>
