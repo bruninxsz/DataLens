@@ -1,5 +1,5 @@
 {
-  "name": "bruno-datagear",
+  "name": "datalens",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -10,8 +10,11 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
+    "chart.js": "^4.5.1",
+    "lucide-vue-next": "^1.0.0",
     "tailwindcss": "^4.3.3",
     "vue": "^3.5.40",
+    "vue-chartjs": "^5.3.4",
     "vue-router": "^5.2.0"
   },
   "devDependencies": {

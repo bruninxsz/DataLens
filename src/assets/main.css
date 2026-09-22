@@ -1,6 +1,13 @@
 @import 'tailwindcss';
 
+/* Tema escuro apenas via classe .dark (evita que o sistema operacional escureça a área interna) */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-instrument: "Instrument Sans", sans-serif;
   --font-dm-sans: "DM Sans", sans-serif;
+}
+
+body {
+  font-family: var(--font-dm-sans);
 }
