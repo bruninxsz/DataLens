@@ -16,35 +16,45 @@ defineProps({
   tipoVariacao: {
     type: String, // 'positivo' ou 'negativo'
     default: 'positivo'
+  },
+  // Texto auxiliar ao lado do valor (ex: "23% do total")
+  descricao: {
+    type: String,
+    default: ''
+  },
+  // Componente de ícone (ex: um ícone do lucide-vue-next)
+  icone: {
+    type: [Object, Function],
+    default: null
   }
 })
 </script>
 
 <template>
-  <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 flex flex-col justify-between">
+  <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between gap-3">
     <!-- Cabeçalho do Card -->
-    <div class="flex items-center justify-between">
-      <span class="text-sm font-medium text-slate-500 dark:text-slate-400">{{ titulo }}</span>
-      <!-- Slot caso queira passar um ícone dinamicamente depois -->
-      <slot name="icone"></slot>
+    <div class="flex items-start justify-between gap-2">
+      <span class="text-xs font-medium uppercase tracking-wide text-slate-500">{{ titulo }}</span>
+      <span v-if="icone" class="w-8 h-8 shrink-0 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center">
+        <component :is="icone" class="w-4 h-4" />
+      </span>
     </div>
 
     <!-- Valor Principal -->
-    <div class="mt-4 flex items-baseline justify-between">
-      <h3 class="text-2xl font-bold text-slate-800 dark:text-white">{{ valor }}</h3>
-      
+    <div class="flex flex-wrap items-baseline gap-2">
+      <h3 class="text-2xl font-bold text-slate-900">{{ valor }}</h3>
+
       <!-- Tag opcional de variação (ex: +12% em relação ao mês passado) -->
-      <span 
-        v-if="variacao" 
+      <span
+        v-if="variacao"
         :class="[
           'text-xs font-semibold px-2 py-0.5 rounded-full',
-          tipoVariacao === 'positivo' 
-            ? 'bg-emerald-50 text-emerald-600 dark:bg-emerald-950/50 dark:text-emerald-400' 
-            : 'bg-rose-50 text-rose-600 dark:bg-rose-950/50 dark:text-rose-400'
+          tipoVariacao === 'positivo' ? 'bg-emerald-50 text-emerald-600' : 'bg-rose-50 text-rose-600'
         ]"
       >
         {{ variacao }}
       </span>
+      <span v-if="descricao" class="text-xs text-slate-500">{{ descricao }}</span>
     </div>
   </div>
 </template>
