@@ -73,6 +73,59 @@ src/
 | Análises | `/analises` | Relatório de clientes com filtros, ordenação e exportação |
 | Clientes, Consultores, Segmentos, Serviços, Insights, Qualidade dos Dados, Configurações | — | Módulos previstos no menu, ainda em construção |
 
+# 📊 Data Lens
+
+> Plataforma web moderna de análise e visualização de dados desenvolvida em equipa.
+
+## 🎯 Objetivo
+O **Data Lens** tem como proposta central facilitar a interpretação e a gestão de dados analíticos por meio de uma interface intuitiva, dashboards responsivos, visualização gráfica avançada e um back-end robusto em Java para o processamento das informações.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+### **Front-end**
+* **Vue.js** (Framework progressivo para construção da interface)
+* **Tailwind CSS** (Estilização ágil, moderna e responsiva)
+* **Vite** (Build tool e ambiente de desenvolvimento rápido)
+
+### **Back-end & Dados**
+* **Java** (Lógica de negócios, API e processamento)
+* **Gestão de Dados** (Armazenamento de utilizadores, relatórios e ficheiros)
+
+### **Ferramentas de Desenvolvimento**
+* **VS Code** (Editor de código principal)
+* **Git & GitHub** (Controle de versão e colaboração em equipa)
+
+---
+
+## 🚀 Funcionalidades da Plataforma
+
+* **Home / Apresentação:** Ecrã principal de boas-vindas e introdução às funcionalidades da ferramenta.
+* **Autenticação:** Sistema completo de **Login** e **Registo de Utilizador** seguro.
+* **Dashboard Principal:** Painel central com **cards informativos** e **gráficos simulados** para métricas rápidas.
+* **Upload de Ficheiros:** Área dedicada para envio e importação de datasets/documentos para análise.
+* **Módulo de Relatórios:** Geração e visualização detalhada de relatórios analíticos baseados nos dados processados.
+
+---
+
+## 📦 Como Executar o Projeto Localmente
+
+Siga os passos abaixo para clonar e rodar o ambiente de desenvolvimento:
+
+### Pré-requisitos
+Certifique-se de ter instalado no seu sistema:
+* **Node.js** (versão 18+ recomendada) e npm/yarn
+* **JDK (Java Development Kit)** (versão 17 ou superior)
+* **Git**
+
+### 1. Clonar o Repositório
+```bash
+git clone https://github.com/bruninxsz/DataLens
+cd data-lens
+
+
+
 A autenticação e a importação de planilhas são simuladas nesta versão, já que a API ainda não está disponível.
 
 ## Equipe
