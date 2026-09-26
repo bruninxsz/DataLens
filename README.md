@@ -135,3 +135,4 @@ A autenticação e a importação de planilhas são simuladas nesta versão, já
 - Bruno Henrique da Silva Pereira
 - Maicon Oliveira De Santana
 - Gabrielle Júlia Andrade da Silva
+
